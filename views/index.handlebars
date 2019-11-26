@@ -1,0 +1,86 @@
+<section class="py-2">
+  <div class="row">
+    <div class="col-md-6 text-center">
+      <h1 class="display-2 mt-1 pt-5">
+        Vestido de verão Zara
+      </h1>
+      <p class="lead">19.99€</p>
+      <form action="/charge" method="POST">
+        <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+          data-key="pk_test_CJrRBr9goxojd1psNlGVXi6x00emxhffEe" data-amount="1999" data-currency="eur"
+          data-name="Vestido de Verão" data-description="Um vestido fresco de verão" data-image="/img/marketplace.jpg"
+          data-locale="auto">
+          </script>
+        <script>
+          // Esconder o botão default do Stripe
+          document.getElementsByClassName('stripe-button-el')[0].style.display = 'none';
+        </script>
+        <button type="submit" class="btn btn-outline-info text-dark btn-lg">Comprar</button>
+      </form>
+    </div>
+    <div class="col-mod-6 mt-5">
+      <img src="/img/1.jpg" alt="" class="img-fluid">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6 text-center">
+      <h1 class="display-2 mt-1 pt-5">
+        Top Giríssimo
+      </h1>
+      <p class="lead">9.99€</p>
+      <form action="/charge" method="POST">
+        <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+          data-key="pk_test_CJrRBr9goxojd1psNlGVXi6x00emxhffEe" data-amount="999" data-currency="eur" data-name="Top"
+          data-description="Um top" data-image="/img/marketplace.jpg" data-locale="auto">
+          </script>
+        <script>
+          // Esconder o botão default do Stripe
+          document.getElementsByClassName('stripe-button-el')[1].style.display = 'none';
+        </script>
+        <button type="submit" class="btn btn-outline-info text-dark btn-lg">Comprar</button>
+      </form>
+    </div>
+    <div class="col-mod-6 mt-5">
+      <img src="/img/4.jpg" alt="" class="img-fluid">
+    </div>
+  </div>
+  <div class="wrapper animated bounceInLeft">
+    <div class="contact">
+      <h1>Contacte-nos</h1>
+      {{msg}}
+      <form method="POST" action="/send">
+        <hr>
+
+        <div class="row">
+
+          <div class="col-md-6">
+            <address><b>Morada:</b> Rua das Flores nº23, Porto</address>
+            <p><b>Telefone:</b> +351 912 345 678</p>
+          </div>
+
+          <div class="col-md-6">
+            <p>
+              <label><b>Nome</b></label>
+              <input type="text" class="form-control" name="name">
+            </p>
+
+            <p>
+              <label><b>Email</b></label>
+              <input type="text" class="form-control" name="email">
+            </p>
+
+            <p>
+              <label><b>Mensagem</b></label>
+              <textarea class="form-control" rows="7" name="message"></textarea>
+            </p>
+
+            <p>
+              <button type="submit" class="btn btn-success btn-block">Send</button>
+            </p>
+
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>

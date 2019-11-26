@@ -1,0 +1,39 @@
+<div class="wrapper animated bounceInLeft">
+  <div class="contact" id="contact">
+    <h1>Contacte-nos</h1>
+    {{msg}}
+    <form method="POST" action="/send">
+      <hr>
+
+      <div class="row">
+
+        <div class="col-md-6">
+          <address><b>Morada:</b> Rua das Flores nº23, Porto</address>
+          <p><b>Telefone:</b> +351 912 345 678</p>
+        </div>
+
+        <div class="col-md-6">
+          <p>
+            <label><b>Nome</b></label>
+            <input type="text" class="form-control" name="name">
+          </p>
+
+          <p>
+            <label><b>Email</b></label>
+            <input type="text" class="form-control" name="email">
+          </p>
+
+          <p>
+            <label><b>Mensagem</b></label>
+            <textarea class="form-control" rows="7" name="message"></textarea>
+          </p>
+
+          <p>
+            <button type="submit" class="btn btn-success btn-block">Send</button>
+          </p>
+
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
